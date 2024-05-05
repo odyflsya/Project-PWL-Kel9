@@ -138,7 +138,7 @@
     </style>
 
     <div class="">
-        <div class="heading">Sign Up</div>
+        <div class="heading">Sign In</div>
         <form method="POST" action="{{ route('login') }}" class="form">
             @csrf
 
