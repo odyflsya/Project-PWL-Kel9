@@ -40,7 +40,7 @@
                     <div class="text-center">
                         <h1 class="mx-auto my-0 text-uppercase">CampusCravings</h1>
                         <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2>
-                        <a href="{{ route('register') }}" class="btn btn-primary" href="#register">register</a>
+                        <!-- <a href="{{ route('register') }}" class="btn btn-primary" href="#register">register</a> -->
                         <a href="{{ route('login') }}" class="btn btn-primary" href="#login">login</a>
                     </div>
                 </div>
