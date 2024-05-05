@@ -196,4 +196,5 @@
 
     <span class="agreement"><a href="#">Learn user license agreement</a></span>
 </div>
+
 </x-guest-layout>
