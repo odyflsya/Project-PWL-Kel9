@@ -24,7 +24,13 @@
         margin-top: 15px;
         box-shadow: #cff0ff 0px 10px 10px -5px;
         border-inline: 2px solid transparent;
+        width: 350px; 
+        margin-left: auto; 
+        margin-right: auto;
     }
+
+
+
 
     .form .input::-moz-placeholder {
         color: rgb(170, 170, 170);
@@ -53,17 +59,19 @@
 
     .form .register-button {
         display: block;
-        width: 100%;
+        width: 350px; 
         font-weight: bold;
         background: linear-gradient(45deg, rgb(16, 137, 211) 0%, rgb(18, 177, 209) 100%);
         color: white;
         padding-block: 15px;
-        margin: 20px auto;
+        margin-top: 20px; 
         border-radius: 20px;
         box-shadow: rgba(133, 189, 215, 0.8784313725) 0px 20px 10px -15px;
         border: none;
         transition: all 0.2s ease-in-out;
+        text-align: center; 
     }
+
 
     .form .register-button:hover {
         transform: scale(1.03);
@@ -82,7 +90,7 @@
     .social-account-container .title {
         display: block;
         text-align: center;
-        font-size: 10px;
+        font-size: 14px; /* Menambahkan ukuran font yang lebih besar */
         color: rgb(170, 170, 170);
     }
 
@@ -90,16 +98,16 @@
         width: 100%;
         display: flex;
         justify-content: center;
-        gap: 15px;
-        margin-top: 5px;
+        gap: 20px; /* Memperbesar jarak antara tombol sosial */
+        margin-top: 10px; /* Menurunkan margin-top agar lebih rapi */
     }
 
     .social-account-container .social-accounts .social-button {
-        background: linear-gradient(45deg, rgb(0, 0, 0) 0%, rgb(112, 112, 112) 100%);
+        background: linear-gradient(45deg, rgb(64, 64, 64) 0%, rgb(112, 112, 112) 100%); /* Mencerahkan warna tombol sosial */
         border: 5px solid white;
-        padding: 5px;
+        padding: 10px; /* Menambahkan padding agar tombol lebih besar */
         border-radius: 50%;
-        width: 40px;
+        width: 50px; /* Memperbesar ukuran tombol */
         aspect-ratio: 1;
         display: grid;
         place-content: center;
@@ -129,7 +137,7 @@
     .agreement a {
         text-decoration: none;
         color: #0099ff;
-        font-size: 9px;
+        font-size: 11px; /* Menambahkan ukuran font yang lebih besar */
     }
 </style>
 
@@ -142,40 +150,38 @@
 
         <!-- Name -->
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" class="block mt-1 w-full input" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            <input required class="input" type="name" name="name" id="name" placeholder="name" :value="old('name')" autofocus autocomplete="name">
             <x-input-error :messages="$errors->get('name')" class="mt-2" />
         </div>
 
         <!-- Email Address -->
-        <div class="mt-4">
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full input" type="email" name="email" :value="old('email')" required autocomplete="username" />
+        <div>
+            <input required class="input" type="eamil" name="email" id="email" placeholder="email" :value="old('email')" autofocus autocomplete="username">
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
-            <x-input-label for="password" :value="__('Password')" />
-            <x-text-input id="password" class="block mt-1 w-full input" type="password" name="password" required autocomplete="new-password" />
+        <div>
+            <input required class="input" type="password" name="password" id="password" placeholder="password" :value="old('password')" autofocus autocomplete="new-password">
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
         <!-- Confirm Password -->
-        <div class="mt-4">
-            <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-            <x-text-input id="password_confirmation" class="block mt-1 w-full input" type="password" name="password_confirmation" required autocomplete="new-password" />
-            <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        <div>
+            <input required class="input" type="password" name="password_confirmation" id="password_confirmation" placeholder="password" :value="old('Confirm Password')" autofocus autocomplete="password_confirmation">
+            <x-input-error :messages="$errors->get('Confirm Password')" class="block mt-1 w-full" />
         </div>
 
-        <div class="flex items-center justify-end mt-4">
-            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                {{ __('Already registered?') }}
-            </a>
-            <button type="submit" class="register-button ms-4">
+        <div class="flex flex-col items-center justify-center mt-4">
+            <button type="submit" class="register-button">
                 {{ __('Register') }}
             </button>
+
+            <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 mt-2" href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
         </div>
+
     </form>
 
     <div class="social-account-container">
@@ -193,7 +199,6 @@
             </button>
         </div>
     </div>
-
-    <span class="agreement"><a href="#">Learn user license agreement</a></span>
 </div>
+
 </x-guest-layout>
