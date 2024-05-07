@@ -12,11 +12,26 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Terrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr') }}
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('cafe')" :active="request()->routeIs('cafe')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Cafe') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('canteen')" :active="request()->routeIs('canteen')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Kantin') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('warkop')" :active="request()->routeIs('warkop')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Warkop') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('rumahmakan')" :active="request()->routeIs('rumahmakan')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Rumah Makan') }}
                     </x-nav-link>
                 </div>
-            </div>
 
             
 
