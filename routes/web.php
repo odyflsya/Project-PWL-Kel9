@@ -50,4 +50,8 @@ Route::get('/rumahmakan', function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('/isi', function () {
+    return view('isi');
+})->name('isi');
+
 require __DIR__.'/auth.php';
