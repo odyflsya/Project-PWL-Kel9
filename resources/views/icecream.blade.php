@@ -1,12 +1,6 @@
 <x-app-layout>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logged In</title>
-
-
-	<style>
+<style>
 
 @import url("https://fonts.googleapis.com/css2?family=Baloo+2&display=swap");
 $main-green: #79dd09 !default;
@@ -376,30 +370,8 @@ a, a:hover {
 	}
 }
 </style>
-</head>
 
-<div id="alertBox" class="alert" style="display: none;">
-        <strong>You have logged in!</strong>
-    </div>
-
-    <script>
-        window.onload = function() {
-            var alertBox = document.getElementById("alertBox");
-            alertBox.style.display = "block";
-            setTimeout(function(){
-                alertBox.style.display = "none";
-            }, 2000);
-        };
-    </script>
-
-    
 <section class="light">
-			@if (session('alert'))
-				<div class="alert alert-success">
-					{{ session('alert') }}
-				</div>
-			@endif
-
 	<div class="full-screen">
 		<div class="h1 text-center text-dark" id="pageHeaderTitle">My Cards Light</div>
 
@@ -408,7 +380,7 @@ a, a:hover {
 				<img class="postcard__img" src="https://picsum.photos/1000/1000" alt="Image Title" />
 			</a>
 			<div class="postcard__text t-dark">
-				<h1 class="postcard__title blue"><a href="{{ route('isi') }}">Podcast Title</a></h1>
+				<h1 class="postcard__title blue"><a href="#">Podcast Title</a></h1>
 				<div class="postcard__subtitle small">
 					<time datetime="2020-05-25 12:00:00">
 						<i class="fas fa-calendar-alt mr-2"></i>Mon, May 25th 2020
@@ -417,8 +389,7 @@ a, a:hover {
 				<div class="postcard__bar"></div>
 				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
 				<ul class="postcard__tagbox">
-				<a href="{{ route('isi') }}" class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</a>
-
+					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
 				</ul>
 			</div>
 		</article>
@@ -479,5 +450,4 @@ a, a:hover {
 	</div>
 </section>
 
-	
 </x-app-layout>

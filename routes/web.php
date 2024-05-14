@@ -40,14 +40,22 @@ Route::get('/warkop', function () {
     return view('warkop');
 })->middleware(['auth', 'verified'])->name('warkop');
 
-Route::get('/rumahmakan', function () {
-    return view('rumahmakan');
-})->middleware(['auth', 'verified'])->name('rumahmakan');
+Route::get('/fastfood', function () {
+    return view('fastfood');
+})->middleware(['auth', 'verified'])->name('fastfood');
+
+Route::get('/icecream', function () {
+    return view('icecream');
+})->middleware(['auth', 'verified'])->name('icecream');
 
     Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/isi', function () {
+    return view('isi');
+})->name('isi');
 
 require __DIR__.'/auth.php';
