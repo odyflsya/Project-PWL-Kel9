@@ -28,6 +28,22 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/cafe', function () {
+    return view('cafe');
+})->middleware(['auth', 'verified'])->name('cafe');
+
+Route::get('/canteen', function () {
+    return view('canteen');
+})->middleware(['auth', 'verified'])->name('canteen');
+
+Route::get('/warkop', function () {
+    return view('warkop');
+})->middleware(['auth', 'verified'])->name('warkop');
+
+Route::get('/rumahmakan', function () {
+    return view('rumahmakan');
+})->middleware(['auth', 'verified'])->name('rumahmakan');
+
     Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
