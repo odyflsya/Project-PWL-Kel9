@@ -1,8 +1,4 @@
 <x-app-layout>
-<<<<<<< HEAD
-=======
-    
->>>>>>> b2dc3761229bd4ebbf0cd3fba0a65002b89e6c52
 
 <head>
     <meta charset="UTF-8">
