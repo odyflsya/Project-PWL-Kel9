@@ -28,16 +28,19 @@
                         {{ __('Warkop') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('rumahmakan')" :active="request()->routeIs('rumahmakan')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
-                        {{ __('Rumah Makan') }}
+                    <x-nav-link :href="route('fastfood')" :active="request()->routeIs('fastfood')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Fast Food') }}
+                    </x-nav-link>
+
+                    <x-nav-link :href="route('icecream')" :active="request()->routeIs('icecream')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('Ice Cream') }}
                     </x-nav-link>
                 </div>
-            </div>
 
             
 
-           <!-- Settings Dropdown -->
-           <div class="hidden sm:flex sm:items-center sm:ms-6">
+            <!-- Settings Dropdown -->
+            <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
