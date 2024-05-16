@@ -28,8 +28,8 @@
                         {{ __('Warkop') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('rumahmakan')" :active="request()->routeIs('rumahmakan')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
-                        {{ __('Rumah Makan') }}
+                    <x-nav-link :href="route('fastfood')" :active="request()->routeIs('fastfood')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                        {{ __('fast food') }}
                     </x-nav-link>
                 </div>
             </div>
