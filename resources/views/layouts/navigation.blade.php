@@ -29,17 +29,21 @@
                     </x-nav-link>
 
                     <x-nav-link :href="route('fastfood')" :active="request()->routeIs('fastfood')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
-                        {{ __('Fast Food') }}
-                    </x-nav-link>
-
-                    <x-nav-link :href="route('icecream')" :active="request()->routeIs('icecream')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
-                        {{ __('Ice Cream') }}
+                        {{ __('fast food') }}
                     </x-nav-link>
                 </div>
             </div>
+<<<<<<< HEAD
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
+=======
+
+            
+
+           <!-- Settings Dropdown -->
+           <div class="hidden sm:flex sm:items-center sm:ms-6">
+>>>>>>> adc6405d63980fa629b13db25212d46162d0a994
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
                         <button class="flex items-center text-sm font-medium text-gray-500 bg-white rounded-md border border-transparent focus:outline-none focus:border-gray-300 focus:ring focus:ring-gray-200 focus:ring-opacity-50">

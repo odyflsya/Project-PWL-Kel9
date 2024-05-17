@@ -7,6 +7,62 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## Tentang Aplikasi
+
+Nama website : campus corner
+
+Campus Corner adalah sebuah website yang dapat membantu user menemukan tempat makan di sekitar Universitas Sumatera Utara, yang sedang dikembangkan oleh kelompok 9 guna memenuhi Tugas Akhir Semester Genap mata kuliah PWL dan Praktikum PWL. 
+
+Kelompok 9 terdiri dari:
+
+- Nama Kelompok
+
+  - {231402022} - {Rahmat Maulana Miftah} - {Front-end}
+  - {231402131} - {Siti Audrey Falisya} - {Back-end}
+  - {231402076} - {Lisa Tri Utari} - {Front-end}
+  - {231402108} - {Zaizha Michella} - {Back-end}
+  - {231402004} - {Adelia Amanda} - {Back-end}
+
+Aplikasi ini bertujuan untuk membantu user untuk menemukan tempat makan terdekat disekitar kampus.
+
+## Modul atau Fitur
+
+Berikut adalah daftar modul atau fitur yang ada di dalam aplikasi:
+
+- [x] Fitur 1 {Autentifikasi dan Otorisasi}: Sudah Dilakukan
+
+Fitur ini memungkinkan pengguna untuk mendaftar, masuk (login), dan keluar (logout) dari aplikasi. Selain itu, autentifikasi juga mencakup pengaturan peran dan hak akses (otorisasi) pengguna ke bagian-bagian tertentu dari website ini.
+
+- [ ] Fitur 2 {Manajemen Pengguna}: Sedang Dilakukan
+
+Fitur ini memungkinkan administrator yang memiliki hak istimewa untuk mengelola pengguna lain, seperti menambahkan, mengedit, atau menghapus akun pengguna.
+
+- [ ] Fitur 3 {Manajemen Konten}: Sedang Dilakukan
+
+Fitur ini Khusus untuk administrator untuk membuat, mengedit dan menghapus konten
+
+- [ ] Fitur 4 {Pencarian}: Akan dilakukan
+
+Fitur ini memungkinkan pengguna untuk mencari konten di dalam website ini.
+
+- [ ] Fitur 5 {Pengaturan Profil}: Sudah Dilakukan
+
+Fitur ini memungkinkan pengguna untuk mengelola informasi profil mereka, seperti nama, foto profil, atau password.
+
+- [ ] Fitur 6 {Review}: Sudah dilakukan
+
+Fitur ini terdiri dari dua bagian, yaitu rating dan komentar, yang membantu pengguna lain dalam mengevaluasi lokasi, layanan, dan makanan di tempat tersebut sebelum mereka memutuskan untuk mengunjungi lokasi tersebut.
+
+## Persyaratan Environment
+
+Untuk menjalankan aplikasi ini, Anda memerlukan:
+
+- Larevl Version : 10 atau yang lebih baru
+- PHP Version: 8.1.17 atau yang lebih baru
+- Database: MySQL 3.3.0 atau yang lebih baru
+
+Pastikan untuk menginstal persyaratan environment yang diperlukan sebelum menjalankan aplikasi.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
