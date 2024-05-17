@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body class="bg-gray-100">
-    @include('layouts.navigation')
+    
+@include('layouts.navigation')
 
     <!-- Main Content -->
     <div class="container mx-auto mt-6">
@@ -105,16 +106,6 @@
             </div>
         </div>
 
-
-<<<<<<< HEAD
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-@include('layouts.navigation')
-<body>
-    <div class="container">
-        <h1>Halaman Isi</h1>
-        <p>Ini adalah halaman isi yang sederhana.</p>
-=======
->>>>>>> adc6405d63980fa629b13db25212d46162d0a994
     </div>
 </body>
 </html>
