@@ -419,6 +419,21 @@ a, a:hover {
 }
 </style>
 
+<div id="alertBox" class="alert" style="display: none;">
+        <strong>You have logged in!</strong>
+    </div>
+
+    <script>
+        window.onload = function() {
+            var alertBox = document.getElementById("alertBox");
+            alertBox.style.display = "block";
+            setTimeout(function(){
+                alertBox.style.display = "none";
+            }, 2000);
+        };
+    </script>
+
+    
 <section class="light">
 	<div class="full-screen">
 		<div class="h1 text-center text-dark" id="pageHeaderTitle">My Cards Light</div>
@@ -437,7 +452,8 @@ a, a:hover {
 				<div class="postcard__bar"></div>
 				<div class="postcard__preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
 				<ul class="postcard__tagbox">
-					<li class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</li>
+				<a href="{{ route('isi') }}" class="tag__item"><i class="fas fa-tag mr-2"></i>Podcast</a>
+
 				</ul>
 			</div>
 		</article>
@@ -498,4 +514,5 @@ a, a:hover {
 	</div>
 </section>
 
+	
 </x-app-layout>
