@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\CardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +17,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/redirects', [HomeController::class, 'redirects'])->middleware(['auth'])->name('redirects');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    });
+
+Route::middleware(['admin'])->group(function () {
+        Route::get('/admin/dashboard', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard');
+    });
+
+Route::post('/login', [LoginController::class, 'authenticate'])->name('login');
+
 Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('actionlogin', [LoginController::class, 'actionlogin'])->name('actionlogin');
 
@@ -24,29 +45,13 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [CardController::class, 'showAllCards'])->name('dashboard');
+Route::get('/warkop', [CardController::class, 'index'])->name('warkop')->defaults('category', 'warkop');
+Route::get('/cafe', [CardController::class, 'index'])->name('cafe')->defaults('category', 'cafe');
+Route::get('/kantin', [CardController::class, 'index'])->name('kantin')->defaults('category', 'kantin');
+Route::get('/fastfood', [CardController::class, 'index'])->name('fastfood')->defaults('category', 'fastfood');
+Route::get('/icecream', [CardController::class, 'index'])->name('icecream')->defaults('category', 'icecream');
 
-Route::get('/cafe', function () {
-    return view('cafe');
-})->middleware(['auth', 'verified'])->name('cafe');
-
-Route::get('/canteen', function () {
-    return view('canteen');
-})->middleware(['auth', 'verified'])->name('canteen');
-
-Route::get('/warkop', function () {
-    return view('warkop');
-})->middleware(['auth', 'verified'])->name('warkop');
-
-Route::get('/fastfood', function () {
-    return view('fastfood');
-})->middleware(['auth', 'verified'])->name('fastfood');
-
-Route::get('/icecream', function () {
-    return view('icecream');
-})->middleware(['auth', 'verified'])->name('icecream');
 
     Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -20,7 +20,7 @@
                         {{ __('Cafe') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('canteen')" :active="request()->routeIs('canteen')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
+                    <x-nav-link :href="route('kantin')" :active="request()->routeIs('kantin')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
                         {{ __('Kantin') }}
                     </x-nav-link>
 
@@ -35,7 +35,8 @@
                     <x-nav-link :href="route('icecream')" :active="request()->routeIs('icecream')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
                         {{ __('Ice Cream') }}
                     </x-nav-link>
-                </div>
+                </div> 
+
 
             
 
