@@ -59,7 +59,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::get("/redirects",[HomeController::class,"redirects"]);
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/redirects', [HomeController::class, 'redirects'])->middleware(['auth'])->name('redirects');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    });
+
+Route::middleware(['admin'])->group(function () {
+        Route::get('/admin/dashboard', function () {
+            return view('admin.dashboard');
+        })->name('admin.dashboard');
+    });
+
 
 Route::get('/isi', function () {
     return view('isi');

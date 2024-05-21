@@ -14,7 +14,7 @@ class LoginController extends Controller
         $credentials = $request->only('email', 'password');
 
         if (Auth::attempt($credentials)) {
-            // Jika berhasil login, periksa peran pengguna
+
             $user = Auth::user();
 
             if ($user->usertype === 'admin') {
@@ -24,7 +24,6 @@ class LoginController extends Controller
             }
         }
 
-        // Jika login gagal, kembalikan ke halaman login dengan pesan kesalahan
         return redirect()->route('login')->with('error', 'Login gagal. Cek kembali email dan password Anda.');
     }
 }

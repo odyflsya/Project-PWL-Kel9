@@ -12,7 +12,8 @@
 
 
 <body class="bg-gray-100">
-    @include('layouts.navigation')
+    
+@include('layouts.navigation')
 
     <!-- Main Content -->
     <div class="container mx-auto mt-6">
@@ -107,12 +108,6 @@
             </div>
         </div>
 
-@vite(['resources/css/app.css', 'resources/js/app.js'])
-@include('layouts.navigation')
-<body>
-    <div class="container">
-        <h1>Halaman Isi</h1>
-        <p>Ini adalah halaman isi yang sederhana.</p>
     </div>
 </body>
 </html>
