@@ -35,8 +35,7 @@
                     <x-nav-link :href="route('icecream')" :active="request()->routeIs('icecream')" class="border-b-2 border-transparent hover:border-purple-500 focus:border-purple-500">
                         {{ __('Ice Cream') }}
                     </x-nav-link>
-                </div> 
-
+                </div>
 
             
 

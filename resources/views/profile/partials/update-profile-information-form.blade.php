@@ -37,6 +37,7 @@
                             {{ __('Click here to re-send the verification email.') }}
                         </button>
                     </p>
+                    @endif
 
                     @if (session('status') === 'verification-link-sent')
                         <p class="mt-2 font-medium text-sm text-green-600">
@@ -44,7 +45,7 @@
                         </p>
                     @endif
                 </div>
-            @endif
+    
         </div>
 
         <div class="flex items-center gap-4">
