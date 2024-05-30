@@ -1,7 +1,5 @@
 <?php
 
-use App\Providers\RouteServiceProvider;
-
 return [
 
     /*
@@ -112,9 +110,6 @@ return [
     |
     */
 
-    'redirects' => [
-        'home' => RouteServiceProvider::HOME,
-    ],
-
     'password_timeout' => 10800,
+
 ];
